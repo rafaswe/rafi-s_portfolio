@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes growLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.line-animation {
+  width: 0;
+  animation: growLine 0.7s ease-out forwards;
+}
+
 body {
   color: white;
   background: #181818;

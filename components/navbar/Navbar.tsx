@@ -16,8 +16,8 @@ const Navbar = () => {
             key={index}
             href={singlePage.pageLink}
             className={`px-4 ${
-              isCurrentPage(singlePage.pageLink) ? "text-active" : "text-white"
-            }`}
+              isCurrentPage(singlePage.pageLink) ? "text-active " : "text-white"
+            } transition-colors  duration-300`}
             prefetch>
             {singlePage.name}
           </Link>

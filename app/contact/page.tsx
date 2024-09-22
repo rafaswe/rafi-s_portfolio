@@ -1,5 +1,7 @@
+import ContactContainer from "@/components/showCaseSection/contact/Contact.container";
+
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return <ContactContainer />;
 };
 
 export default ContactPage;

@@ -1,5 +1,7 @@
+import ResumeContainer from "@/components/showCaseSection/resume/Resume.container";
+
 const ResumePage = () => {
-  return <div>ResumePage</div>;
+  return <ResumeContainer />;
 };
 
 export default ResumePage;

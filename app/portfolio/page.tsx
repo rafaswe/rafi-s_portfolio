@@ -1,5 +1,7 @@
+import PortFolioContainer from "@/components/showCaseSection/portfolio/Portfolio.container";
+
 const PortfolioPage = () => {
-  return <div>PortfolioPage</div>;
+  return <PortFolioContainer />;
 };
 
 export default PortfolioPage;

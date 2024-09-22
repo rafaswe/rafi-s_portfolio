@@ -1,5 +1,7 @@
+import BlogsContainer from "@/components/showCaseSection/blogs/Blogs.container";
+
 const BlogsPage = () => {
-  return <div>BlogsPage</div>;
+  return <BlogsContainer />;
 };
 
 export default BlogsPage;
