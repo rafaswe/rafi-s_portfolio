@@ -60,7 +60,7 @@ const SideBar = () => {
           </div>
         </div>
 
-        <div className="flex py-4 md:pb-0 md:pt-10 flex-col gap-4 md:gap-6">
+        <div className="flex py-4 lg:pb-0 lg:pt-10 flex-col gap-4 md:gap-6">
           {informationArray.map((singleInfo, index) => (
             <Link
               href={singleInfo.link}
@@ -82,7 +82,7 @@ const SideBar = () => {
           ))}
         </div>
       </div>
-      <div className="flex gap-2.5 border-t pt-5 justify-center items-center">
+      <div className="flex gap-2.5 border-t pt-5 mt-3 justify-center items-center">
         {SideBarFooterIcons.map((singleInfo, index) => (
           <div key={index}>
             <Link href={singleInfo.link}>

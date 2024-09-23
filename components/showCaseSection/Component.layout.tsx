@@ -8,10 +8,10 @@ const ComponentLayout = ({
   children: ReactNode;
 }) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-9 md:pt-16 lg:pt-0">
       <div className="relative w-fit pr-5">
         <p className="text-4xl font-semibold">{title}</p>
-        <div className="line-animation absolute bottom-0 left-0 h-[2px] bg-white rounded-lg"></div>
+        <div className="line-animation absolute -bottom-4 left-0 h-[3px] bg-active rounded-lg"></div>
       </div>
       {children}
     </div>

@@ -7,13 +7,31 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 40%;
   }
 }
 
 .line-animation {
   width: 0;
   animation: growLine 0.7s ease-out forwards;
+}
+
+.slide-menu {
+  position: absolute; /* or relative based on your layout */
+  top: 100%; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e; /* Your desired background */
+  border-radius: 0 0 8px 8px; /* Adjust for rounded corners */
+  transform: translateY(-10px); /* Optional: start with a slight offset */
+  opacity: 0; /* Start hidden */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.slide-menu.open {
+  transform: translateY(0); /* Slide down */
+  opacity: 1; /* Make it visible */
 }
 
 body {
