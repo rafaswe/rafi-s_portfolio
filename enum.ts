@@ -95,14 +95,16 @@ export const AboutMeInfo = {
   ],
   TestimonialsList: [
     {
-      gender: "MALE",
-      name: "",
-      description: "",
+      iconUrl: "/images/male.svg",
+      name: "MD. Ariful Rahman",
+      description:
+        "Working with 'Mahmudul Hasan Rafi' has transformed our design projects with [his/her/their] creative vision and technical expertise. He fosters an inspiring environment that motivates the entire team",
     },
     {
-      gender: "FEMALE",
-      name: "",
-      description: "",
+      iconUrl: "/images/female.svg",
+      name: "Sujana Jalal Prakrity",
+      description:
+        "Mentoring with Rafi was invaluable, as he simplified complex concepts and fueled my growth in graphic design. His passion for nurturing talent truly sets him apart.",
     },
   ],
 };
