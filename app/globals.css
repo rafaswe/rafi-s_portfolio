@@ -34,6 +34,14 @@
   opacity: 1; /* Make it visible */
 }
 
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
 body {
   color: white;
   background: #181818;

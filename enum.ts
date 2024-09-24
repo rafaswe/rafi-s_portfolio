@@ -98,13 +98,25 @@ export const AboutMeInfo = {
       iconUrl: "/images/male.svg",
       name: "MD. Ariful Rahman",
       description:
-        "Working with 'Mahmudul Hasan Rafi' has transformed our design projects with [his/her/their] creative vision and technical expertise. He fosters an inspiring environment that motivates the entire team",
+        "Working with 'Mahmudul Hasan Rafi' has transformed our design projects with his creative vision and technical expertise. He fosters an inspiring environment that motivates the entire team",
     },
     {
       iconUrl: "/images/female.svg",
       name: "Sujana Jalal Prakrity",
       description:
         "Mentoring with Rafi was invaluable, as he simplified complex concepts and fueled my growth in graphic design. His passion for nurturing talent truly sets him apart.",
+    },
+  ],
+  ClientsList: [
+    {
+      iconUrl: "/images/creativeIt.webp",
+      link: "https://www.creativeitinstitute.com/",
+    },
+    { iconUrl: "/images/seito.png", link: "https://seitointernational.com/" },
+    { iconUrl: "/images/coradius.webp", link: "https://coradiusitcenter.com/" },
+    {
+      iconUrl: "/images/pencilTech.webp",
+      link: "https://in.linkedin.com/company/penciltechnologies",
     },
   ],
 };

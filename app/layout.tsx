@@ -14,13 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="px-2 lg:px-0 lg:w-11/12 relative mx-auto min-h-[100vh] flex md:flex-row flex-col gap-2 lg:gap-6   py-10 ">
+    <html lang="en" className="hidden-scrollbar">
+      <body className="px-2 lg:px-0 lg:w-11/12 relative mx-auto  flex md:flex-row flex-col gap-2 lg:gap-6   py-10 ">
         <div className="xl:w-1/4 h-fit md:sticky top-4">
           <SideBar />
         </div>
 
-        <div className="px-4 lg:p-8 rounded-xl shadow-lg bg-secondary flex-1 md:relative">
+        <div className="p-4 lg:p-8 rounded-xl shadow-lg bg-secondary flex-1 md:relative">
           <div className="sticky z-40 md:absolute top-0 right-0">
             <Navbar />
           </div>

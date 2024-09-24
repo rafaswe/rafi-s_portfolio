@@ -1,9 +1,11 @@
 import { AboutMeInfo } from "@/enum";
 import Image from "next/image";
+import Link from "next/link";
 import ComponentLayout from "../Component.layout";
 
 const AboutContainer = () => {
-  const { description, WhatIamDoingList, TestimonialsList } = AboutMeInfo;
+  const { description, WhatIamDoingList, TestimonialsList, ClientsList } =
+    AboutMeInfo;
   return (
     <ComponentLayout title={"About me"}>
       <div className="flex flex-col gap-8">
@@ -56,6 +58,28 @@ const AboutContainer = () => {
                 </div>
                 <p>{singleTestimonial.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Clients  */}
+        <div className="flex flex-col gap-4">
+          <p className="text-2xl font-semibold">Clients</p>
+          <div className=" flex gap-4 lg:gap-10 flex-wrap items-center">
+            {ClientsList.map((singleClient, index) => (
+              <Link
+                href={singleClient.link}
+                key={index}
+                target="_blank"
+                rel="noreferrer">
+                <Image
+                  src={singleClient.iconUrl}
+                  alt="Compnay Logo"
+                  width={160}
+                  height={160}
+                  className="w-20 lg:w-28 rounded-full h-20 lg:h-28"
+                />
+              </Link>
             ))}
           </div>
         </div>
