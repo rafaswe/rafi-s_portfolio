@@ -67,7 +67,7 @@ export const AboutMeInfo = {
     paragraph1: `I am a creative professional with 6+ years of experience in graphic design and UI/UX, focused on crafting visually appealing, user-centered experiences. Pursuing a Bachelor's in Computer Science, I blend design with technology to create intuitive solutions that balance aesthetics and functionality.`,
     paragraph2: `Beyond my academic pursuits, I am privileged to mentor budding designers, helping them refine their skills in UI/UX and graphic design. This role allows me to inspire others while constantly evolving in my craft. My approach to design is rooted in creativity, innovation, and empathy, ensuring that each project tells a story and connects with its audience. I thrive in environments where creativity meets strategy, continuously exploring new trends and pushing the boundaries of design to create impactful, lasting impressions.`,
   },
-  WhatIamDoingList: [
+  whatIamDoingList: [
     {
       iconUrl: "/images/ui.svg",
       title: "UI/UX Designer",
@@ -93,7 +93,7 @@ export const AboutMeInfo = {
         "Elevate brands by creating strategic, visually compelling marketing materials that engage audiences, drive conversions, and amplify brand presence across platforms.",
     },
   ],
-  TestimonialsList: [
+  testimonialsList: [
     {
       iconUrl: "/images/male.svg",
       name: "MD. Ariful Rahman",
@@ -107,7 +107,7 @@ export const AboutMeInfo = {
         "Mentoring with Rafi was invaluable, as he simplified complex concepts and fueled my growth in graphic design. His passion for nurturing talent truly sets him apart.",
     },
   ],
-  ClientsList: [
+  clientsList: [
     {
       iconUrl: "/images/creativeIt.webp",
       link: "https://www.creativeitinstitute.com/",
@@ -117,6 +117,86 @@ export const AboutMeInfo = {
     {
       iconUrl: "/images/pencilTech.webp",
       link: "https://in.linkedin.com/company/penciltechnologies",
+    },
+  ],
+};
+
+export const Resume = {
+  education: {
+    title: "Education",
+    icon: "/images/education.svg",
+    infoList: [
+      {
+        degreeTitle: "Bachelor of Science in Computer Engineering",
+        session: "January,2022 - Present",
+        result: "CGPA: 3.00 out of 4.00",
+        institution: "Daffodil International University, Dhaka",
+      },
+      {
+        degreeTitle: "Higher Secondary School Certificate",
+        session: "June,2017 - April,2019",
+        result: "GPA: 5.00 out of 5.00",
+        institution: "Govt. Science College, Tejgaon, Dhaka",
+      },
+      {
+        degreeTitle: "Secondary School Certificate",
+        session: "January,2015 - December,2016",
+        result: "GPA: 5.00 out of 5.00",
+        institution: "Bright School & College, Dhaka",
+      },
+    ],
+  },
+  experinces: {
+    title: "Experiences",
+    icon: "/images/experience.svg",
+    infoList: [
+      {
+        institution: "Boro vai er Basha",
+        position: "Mentor of Graphics Designing",
+        workingPeriod: "March, 2022 - Present",
+        desc: "As a mentor, I guide aspiring graphic designers in mastering design tools like Adobe Photoshop and Illustrator. I help students develop strong visual concepts and apply design theory to practical projects. I also provide feedback on their work to improve their technical and creative skills.",
+      },
+      {
+        institution: "Creative IT",
+        position: "UI/UX Designer",
+        workingPeriod: "March, 2024 - Present",
+        desc: "I work on creating intuitive user interfaces for both web and mobile platforms. My role involves collaborating with developers and product teams to improve user experience by conducting research and testing. I also design wireframes and prototypes to ensure seamless user interactions and responsive design.",
+      },
+      {
+        institution: "Boro vai er Basha",
+        position: "Graphics Designer",
+        workingPeriod: "March, 2022 - May, 2023",
+        desc: "In this role, I was responsible for designing promotional materials, including banners, posters, and social media content. I collaborated with the marketing team to align the visual designs with campaign goals. I also handled branding tasks, ensuring consistency across all visual content.",
+      },
+    ],
+  },
+  skills: [
+    {
+      title: "Graphics Designing",
+      tools: [
+        { icon: "/images/adobeIllus.svg", name: "Adobe Illustrator" },
+        { icon: "/images/adobePs.svg", name: "Adobe Photoshop" },
+        { icon: "/images/adobeEx.svg", name: "Adobe Express" },
+        { icon: "/images/canva.svg", name: "Canva" },
+        { icon: "/images/sketch.svg", name: "Sketch" },
+      ],
+    },
+    {
+      title: "UI/UX Designer",
+      tools: [
+        { icon: "/images/figma.svg", name: "Figma" },
+        { icon: "/images/adobeXd.svg", name: "Adobe XD" },
+        { icon: "/images/proto.svg", name: "Proto.io" },
+        { icon: "/images/miro.svg", name: "Miro" },
+      ],
+    },
+    {
+      title: "Others",
+      tools: [
+        { icon: "/images/video.svg", name: "Video Editing" },
+        { icon: "/images/addvertisement.svg", name: "Add Management" },
+        { icon: "/images/socialMedia.svg", name: "Social Media Marketing" },
+      ],
     },
   ],
 };

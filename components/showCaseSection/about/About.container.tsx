@@ -4,8 +4,12 @@ import Link from "next/link";
 import ComponentLayout from "../Component.layout";
 
 const AboutContainer = () => {
-  const { description, WhatIamDoingList, TestimonialsList, ClientsList } =
-    AboutMeInfo;
+  const {
+    description: description,
+    whatIamDoingList: WhatIamDoingList,
+    testimonialsList: TestimonialsList,
+    clientsList: ClientsList,
+  } = AboutMeInfo;
   return (
     <ComponentLayout title={"About me"}>
       <div className="flex flex-col gap-8">
