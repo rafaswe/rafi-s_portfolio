@@ -1,3 +1,5 @@
+import { PortpholioProps } from "./components/constant/type";
+
 export const SideBarPersonalInfo = {
   portFolioImage: "/images/portfolioPhoto.webp",
   name: "Mahmudul Hasan Rafi",
@@ -200,3 +202,64 @@ export const Resume = {
     },
   ],
 };
+
+export const Genre_List = {
+  ALL: "All",
+  GRAPHICS: "Graphics Designing",
+  UI_UX: "UI/UX",
+  OTHERS: "Others",
+};
+export const Portfolio: PortpholioProps = {
+  menuList: [
+    Genre_List.ALL,
+    Genre_List.GRAPHICS,
+    Genre_List.UI_UX,
+    Genre_List.OTHERS,
+  ],
+  projectsList: [
+    {
+      imgUrl: "/images/project1.webp",
+      projectName: "Nonfiction Book Cover",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/17269408-Nonfiction-Book-cover",
+    },
+    {
+      imgUrl: "/images/project2.webp",
+      projectName: "Cook Book Cover",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/17268975-Cook-Book-Cover",
+    },
+    {
+      imgUrl: "/images/project3.webp",
+      projectName: "How To Capture Success",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/16179256-How-To-Capture-Success",
+    },
+    {
+      imgUrl: "/images/project4.webp",
+      projectName: "Cook Book Cover",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/17268941-Cook-Book-Cover",
+    },
+    {
+      imgUrl: "/images/project5.webp",
+      projectName: "The Fierce Wolf",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/17268871-The-Fierce-Wolf",
+    },
+    {
+      imgUrl: "/images/project6.webp",
+      projectName: "Non Fiction Book Cover",
+      projectGenre: Genre_List.GRAPHICS,
+      link: "https://dribbble.com/shots/16179250-Non-Fiction-Book-Cover",
+    },
+  ],
+};
+export const Blogs = [
+  {
+    imgUrl: "",
+    date: "",
+    title: "",
+    shortDes: "",
+  },
+];
