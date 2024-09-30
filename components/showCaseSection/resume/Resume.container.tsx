@@ -1,4 +1,5 @@
 import Carousel from "@/components/common/Carousel";
+import { ToolsType } from "@/components/constant/type";
 import { Resume } from "@/enum";
 import Image from "next/image";
 import ComponentLayout from "../Component.layout";
@@ -122,7 +123,7 @@ const ResumeContainer = () => {
           <h1 className="text-center text-2xl leading-none font-bold">
             Skills
           </h1>
-          <div className="">
+          <div>
             <Carousel
               autoPlay={true}
               interval={3000}
@@ -152,7 +153,7 @@ const ResumeContainer = () => {
   );
 };
 
-const ToolsSegment = ({ tools }) => {
+const ToolsSegment = ({ tools }: { tools: ToolsType }) => {
   return (
     <div className="flex items-center gap-10 justify-center">
       {tools.map((tool, toolIndex) => {
