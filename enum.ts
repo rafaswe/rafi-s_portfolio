@@ -257,9 +257,33 @@ export const Portfolio: PortpholioProps = {
 };
 export const Blogs = [
   {
-    imgUrl: "",
-    date: "",
-    title: "",
-    shortDes: "",
+    imgUrl: "/images/blog1.webp",
+    date: "10 January, 2023",
+    title: "The Art and Science of Graphic Design: A Creative Journey",
+    shortDes:
+      "Graphic design is an evolving art form that combines creativity, communication, and technology to convey ideas and messages in visually compelling ways.",
+  },
+  {
+    imgUrl: "/images/blog2.webp",
+    date: "10 January, 2023",
+    title: "Unleashing Creativity: The Art and Science of Graphic Design",
+    shortDes:
+      "Graphic design is a dynamic field that blends art and technology to communicate ideas and messages visually.",
+  },
+  {
+    imgUrl: "/images/blog3.webp",
+    date: "10 January, 2023",
+    title:
+      "Exploring the World of UI/UX Design: Crafting Seamless Digital Experiences",
+    shortDes:
+      "User Interface (UI) and User Experience (UX) design are two closely related disciplines that focus on improving the usability, accessibility, and enjoyment of a product.",
+  },
+  {
+    imgUrl: "/images/blog4.webp",
+    date: "10 January, 2023",
+    title:
+      "The Evolution of Digital Marketing: Strategies for Success in the Modern Age",
+    shortDes:
+      "In the ever-evolving landscape of business, digital marketing has emerged as a cornerstone for brands seeking to connect with consumers in an increasingly online world.",
   },
 ];
