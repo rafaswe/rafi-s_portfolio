@@ -5,6 +5,7 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ComponentLayout from "../Component.layout";
+import DarkMap from "./Map.component";
 // Define the types for the form inputs
 interface IFormInput {
   name: string;
@@ -55,14 +56,15 @@ const ContactContainer = () => {
       <div className="flex flex-col gap-6">
         {/* Map section  */}
 
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.700787493159!2d90.46419211109638!3d23.68665599113147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b7001f5a00bd%3A0x28a4e8bc978775d8!2sRafa&#39;s%20Palace!5e0!3m2!1sen!2sbd!4v1727838051808!5m2!1sen!2sbd"
           width="600"
           height="250"
           className="border-0 w-full rounded-xl"
           allowFullScreen={true}
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"></iframe>
+          referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+        <DarkMap height="250px" width="100%" />
 
         <div className="flex flex-col gap-3">
           <p className="text-lg font-semibold">Contact Form</p>
