@@ -61,41 +61,48 @@ const PortFolioContainer = () => {
           {menuList?.map((singleMenu, index) => (
             <button
               key={index}
+              onClick={() => setSelectedGenre(singleMenu)}
+              onTouchStart={() => setSelectedGenre(singleMenu)}
               className={`transition-transform duration-300 ease-in-out ${
                 selectedGenre == singleMenu
                   ? "text-active font-semibold"
                   : "font-normal"
-              }`}
-              onClick={() => setSelectedGenre(singleMenu)}>
+              }`}>
               {singleMenu}
             </button>
           ))}
         </div>
         <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 ">
-          {selectedProjectList?.map((project, index) => (
-            <AnimateCard key={index} variants={linkVariants}>
-              <Link
-                className="flex flex-col gap-2 group"
-                href={project.link}
-                target="_blank"
-                rel="noreferrer">
-                <div className="p-3 bg-card shadow-2xl rounded-lg relative overflow-hidden">
-                  <div className="absolute inset-0 z-10 bg-transparent border-2 border-transparent group-hover:border-active transition-all duration-1000 ease-in-out rounded-lg" />
-                  <Image
-                    src={project.imgUrl}
-                    alt="project"
-                    width={160}
-                    height={160}
-                    className="w-full h-44 rounded-lg relative z-0"
-                  />
-                </div>
-                <div className="italic px-1 flex flex-col justify-start">
-                  <p className="font-semibold ">{project.projectName}</p>
-                  <p className="text-sm text-start">{project.projectGenre}</p>
-                </div>
-              </Link>
-            </AnimateCard>
-          ))}
+          {selectedProjectList.length > 0 ? (
+            selectedProjectList?.map((project, index) => (
+              <AnimateCard key={index} variants={linkVariants}>
+                <Link
+                  className="flex flex-col gap-2 group"
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer">
+                  <div className="p-3 bg-card shadow-2xl rounded-lg relative overflow-hidden">
+                    <div className="absolute inset-0 z-10 bg-transparent border-2 border-transparent group-hover:border-active transition-all duration-1000 ease-in-out rounded-lg" />
+                    <Image
+                      src={project.imgUrl}
+                      alt="project"
+                      width={160}
+                      height={160}
+                      className="w-full h-44 rounded-lg relative z-0"
+                    />
+                  </div>
+                  <div className="italic px-1 flex flex-col justify-start">
+                    <p className="font-semibold ">{project.projectName}</p>
+                    <p className="text-sm text-start">{project.projectGenre}</p>
+                  </div>
+                </Link>
+              </AnimateCard>
+            ))
+          ) : (
+            <div className="h-20 w-full col-span-2 bg-card flex items-center justify-center rounded-lg">
+              No Data yet
+            </div>
+          )}
         </div>
       </div>
     </ComponentLayout>

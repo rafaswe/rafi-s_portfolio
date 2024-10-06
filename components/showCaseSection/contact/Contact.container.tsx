@@ -74,16 +74,16 @@ const ContactContainer = () => {
               type="text"
               placeholder="Full name"
               {...register("name", { required: true })}
-              className="px-3 py-2.5 rounded-lg focus:outline-none bg-secondary border border-card"
+              className="px-3 py-2.5 hover:border-active transition-border duration-300 md:col-span-1 col-span-2 rounded-lg focus:outline-none bg-secondary border border-card "
             />
             <input
               type="email"
               placeholder="Email Address"
               {...register("email", { required: true })}
-              className="px-3 py-2.5 rounded-lg focus:outline-none bg-secondary border border-card"
+              className="px-3 py-2.5 hover:border-active transition-border duration-300  rounded-lg md:col-span-1 col-span-2 focus:outline-none bg-secondary border border-card"
             />
             <textarea
-              className="col-span-2 px-3 py-2.5 rounded-lg text-white focus:outline-none bg-secondary border border-card"
+              className="col-span-2 px-3 hover:border-active transition-border duration-300  py-2.5 rounded-lg text-white focus:outline-none bg-secondary border border-card"
               placeholder="Your Message"
               rows={4}
               {...register("message", { required: true })}></textarea>

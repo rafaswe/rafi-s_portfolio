@@ -5,7 +5,7 @@ export const SideBarPersonalInfo = {
   name: "Mahmudul Hasan Rafi",
   profession: "Graphic & UI/UX designer ",
   email: "hello.mahmudulrafi@gmail.com",
-  phoneNumber: "+880 1233333333",
+  phoneNumber: "+8801864076780",
   birthDay: {
     day: "08",
     month: "June",
@@ -113,12 +113,22 @@ export const AboutMeInfo = {
     {
       iconUrl: "/images/creativeIt.webp",
       link: "https://www.creativeitinstitute.com/",
+      title: "Creative IT",
     },
-    { iconUrl: "/images/seito.png", link: "https://seitointernational.com/" },
-    { iconUrl: "/images/coradius.webp", link: "https://coradiusitcenter.com/" },
+    {
+      iconUrl: "/images/seito.png",
+      link: "https://seitointernational.com/",
+      title: "Seito International (Japanese Language School)",
+    },
+    {
+      iconUrl: "/images/coradius.webp",
+      link: "https://coradiusitcenter.com/",
+      title: "Coradius IT",
+    },
     {
       iconUrl: "/images/pencilTech.webp",
       link: "https://in.linkedin.com/company/penciltechnologies",
+      title: "Pencil IT",
     },
   ],
 };

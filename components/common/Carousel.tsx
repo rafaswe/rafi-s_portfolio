@@ -76,7 +76,7 @@ const Carousel: React.FC<CarouselProps> = ({
         {children.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-1 sm:w-3 h-1 sm:h-3 rounded-full ${
               index === activeIndex ? "bg-white" : "bg-gray-400"
             }`}
             onClick={() => setActiveIndex(index)}
@@ -90,9 +90,9 @@ const Carousel: React.FC<CarouselProps> = ({
         className="absolute top-0 left-0  z-30 flex items-center justify-center h-full px-4"
         onClick={prevSlide}
         aria-label="Previous">
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 shadow-2xl group-hover:bg-white/50">
+        <span className="inline-flex items-center justify-center md:w-10 md:h-10 w-4 h-4 rounded-full bg-black/30 shadow-2xl group-hover:bg-white/50">
           <svg
-            className="w-4 h-4 text-white"
+            className="md:w-4 w-2 h-2 md:h-4 text-white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 6 10">
@@ -110,9 +110,9 @@ const Carousel: React.FC<CarouselProps> = ({
         className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4"
         onClick={nextSlide}
         aria-label="Next">
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 shadow-2xl group-hover:bg-white/50">
+        <span className="inline-flex items-center justify-center w-4 h-4 md:w-10 md:h-10 rounded-full bg-black/30 shadow-2xl group-hover:bg-white/50">
           <svg
-            className="w-4 h-4 text-white"
+            className="md:w-4 w-2 h-2 md:h-4 text-white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 6 10">

@@ -21,7 +21,7 @@ export default function RootLayout({
         </div>
 
         <div className="p-4 lg:p-8 rounded-xl shadow-lg bg-secondary flex-1 md:relative">
-          <div className="sticky z-40 md:absolute top-0 right-0">
+          <div className="sticky z-40 md:absolute top-0 right-0 ">
             <Navbar />
           </div>
           {children}

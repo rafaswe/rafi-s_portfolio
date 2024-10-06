@@ -1,15 +1,52 @@
+"use client";
 import { AboutMeInfo } from "@/enum";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 import ComponentLayout from "../Component.layout";
 
 const AboutContainer = () => {
   const {
-    description: description,
+    description,
     whatIamDoingList: WhatIamDoingList,
     testimonialsList: TestimonialsList,
     clientsList: ClientsList,
   } = AboutMeInfo;
+
+  // Tooltip state
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    title: "",
+    position: { bottom: 0, right: 0 },
+  });
+  const tooltipRef = useRef(null);
+
+  const handleMouseEnter = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    title: string
+  ) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setTooltip({
+      visible: true,
+      title: title,
+      position: {
+        bottom: rect.height + 10, // Position above the icon
+        right: rect.width / 2 - 50, // Centered above the icon (adjust the -50 value based on tooltip width)
+      },
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ ...tooltip, visible: false });
+  };
+
+  // Close tooltip when clicking outside
+  useOnClickOutside(tooltipRef, () =>
+    setTooltip({ ...tooltip, visible: false })
+  );
+
   return (
     <ComponentLayout title={"About me"}>
       <div className="flex flex-col gap-8">
@@ -67,22 +104,42 @@ const AboutContainer = () => {
         </div>
 
         {/* Clients  */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 relative">
           <p className="text-2xl font-semibold">Clients</p>
-          <div className=" flex gap-4 lg:gap-10 flex-wrap items-center">
+          <div className="flex gap-4 lg:gap-6 flex-wrap items-center">
             {ClientsList.map((singleClient, index) => (
               <Link
                 href={singleClient.link}
                 key={index}
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+                onMouseEnter={(event) =>
+                  handleMouseEnter(event, singleClient.title)
+                }
+                onMouseLeave={handleMouseLeave}
+                className="relative">
                 <Image
                   src={singleClient.iconUrl}
-                  alt="Compnay Logo"
+                  alt="Company Logo"
                   width={160}
                   height={160}
-                  className="w-20 lg:w-28 rounded-full h-20 lg:h-28"
+                  className="w-20 lg:w-28 rounded-full border-2 border-transparent transition-border transition-transform transform-gpu duration-300 hover:scale-105 ease-in-out hover:border-active h-20 lg:h-28"
                 />
+                {/* Tooltip */}
+                {tooltip.visible && tooltip.title === singleClient.title && (
+                  <motion.div
+                    ref={tooltipRef}
+                    className="absolute text-center text-xs bg-primary shadow-active shadow-inner text-white p-2 rounded-md"
+                    style={{
+                      bottom: tooltip.position.bottom,
+                      right: tooltip.position.right,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: { duration: 0.2 } }}
+                    exit={{ opacity: 0, transition: { duration: 0.2 } }}>
+                    {tooltip.title}
+                  </motion.div>
+                )}
               </Link>
             ))}
           </div>

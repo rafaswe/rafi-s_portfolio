@@ -96,7 +96,7 @@ const ResumeContainer = () => {
                   </div>
                   <div className="w-8 lg:w-12"></div>
                   <div className="pb-6 flex w-full flex-col gap-2">
-                    <div className="flex justify-between">
+                    <div className="flex sm:flex-row flex-col justify-between">
                       <div>
                         <p className="md:text-lg font-Medium leading-none">
                           {institution}
@@ -128,7 +128,7 @@ const ResumeContainer = () => {
               autoPlay={true}
               interval={3000}
               className="shadow-inner rounded-2xl shadow-slate-700"
-              containerClassName="md:h-72">
+              containerClassName=" md:h-72">
               {skills.map((skill, index) => {
                 const { title, tools } = skill;
                 return (
@@ -155,7 +155,7 @@ const ResumeContainer = () => {
 
 const ToolsSegment = ({ tools }: { tools: ToolsType }) => {
   return (
-    <div className="flex items-center gap-10 justify-center">
+    <div className="flex items-center flex-wrap gap-2 sm:gap-10 justify-center">
       {tools.map((tool, toolIndex) => {
         const { icon, name } = tool;
         return (
@@ -167,9 +167,9 @@ const ToolsSegment = ({ tools }: { tools: ToolsType }) => {
               alt={name}
               width={100}
               height={100}
-              className="w-24 h-24"
+              className="xl:w-24 sm:w-6 sm:h-6 w-4 h-4 xl:h-24"
             />
-            <p className="text-center pl-0.5">{name}</p>
+            <p className="md:block hidden text-center pl-0.5">{name}</p>
           </div>
         );
       })}
