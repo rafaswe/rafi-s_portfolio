@@ -4,7 +4,7 @@ export const SideBarPersonalInfo = {
   portFolioImage: "/images/portfolioPhoto.webp",
   name: "Mahmudul Hasan Rafi",
   profession: "Graphic & UI/UX designer ",
-  email: "mahmudulhasanrafi@gmail.com",
+  email: "hello.mahmudulrafi@gmail.com",
   phoneNumber: "+880 1233333333",
   birthDay: {
     day: "08",
